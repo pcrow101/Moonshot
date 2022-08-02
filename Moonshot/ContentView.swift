@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
+    let missions: [Mission] = Bundle.main.decode("missions.json")
+
     var body: some View {
-        Image("Marwell")
-            .resizable()
-            .frame(width: 300, height: 300)
+        Text("\(astronauts.count)")
+            .padding()
     }
 }
 
